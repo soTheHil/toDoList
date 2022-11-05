@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+}
+.app{
+    display:flex;
+}
+.side{
+    background-color: rgb(42, 42, 192);
+    padding: 20px;
+    width: 400px;
+}
+.block{
+    display:block;
+}
+.inbox{
+    background-color: aquamarine;
+    padding: 20px;
+    width: 100%;
+}
+.hidden{
+    display:none;
+}
+*{
+    box-sizing: border-box;
+}
+form{
+    padding: 10px;
+    position: relative;
+    border: solid rgb(128, 128, 128) 3px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+form > textarea{
+    width: 100%;
+    resize:none;
+    height: 50px;
+    border:none;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+form > input[type="text"] {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
+
+form > input[type="date"] {
+    height:25px;
+    margin-right:20px;
+}
+form > #btnAddTask {
+   height: 30px;
+   width:80px;
+   position:absolute;
+   bottom: -40px;
+   right: 100px;
+}
+form > #btnCancel{
+   height: 30px;
+   width:80px;
+   position:absolute;
+   bottom: -40px;
+   right: 0px;
+}
+
+form > select{
+    height: 25px;
+}
+
+#addTaskPane{
+    margin-top: 50px;
+}
+
+.task{
+    display: grid;
+    grid-template-columns: 50px 1fr 80px 80px 80px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    background-color:rgb(128, 128, 128);
+    margin: 15px 0px;
+    border-radius: 5px;
+}
+.line-through{
+    text-decoration: line-through;
+}
+.task > p{
+    justify-self: left;
+}
+
+.focus{
+    text-decoration: underline;
+}
