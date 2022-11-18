@@ -1,24 +1,53 @@
-body{
+html,body{
     margin: 0px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .app{
     display:flex;
+
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body > header {
+    
+    height: 10vh;
+    margin: 0px;
+    padding: 10px 20px;
+    background-color: #84a98c;
+    color: white;
+}
+header > p{
+    margin: 0px;
+    font-size: 40px;
 }
 .side{
-    background-color: rgb(42, 42, 192);
-    padding: 20px;
-    width: 400px;
+    background-color: #e5e5e5;
+    padding: 20px 40px;
+    padding-left: 40px;
+    width: 500px;
+    min-height: 90vh;
 }
 .block{
     display:block;
 }
 .inbox{
-    background-color: aquamarine;
-    padding: 20px;
+    background-color: #ffffff;
+    padding:20px 80px;
     width: 100%;
+    min-height: 90vh;
+}
+
+#projTitle {
+    padding: 0px;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 .hidden{
-    display:none;
+    display:none !important;
 }
 *{
     box-sizing: border-box;
@@ -52,12 +81,16 @@ form > input[type="date"] {
     height:25px;
     margin-right:20px;
 }
-form > #btnAddTask {
+form > #btnFormAddTask {
    height: 30px;
    width:80px;
    position:absolute;
    bottom: -40px;
    right: 100px;
+   background-color: #84a98c;
+}
+form > #btnFormAddTask:hover{
+    background-color: #699073;
 }
 form > #btnCancel{
    height: 30px;
@@ -66,7 +99,9 @@ form > #btnCancel{
    bottom: -40px;
    right: 0px;
 }
-
+form > #btnCancel:hover{
+    background-color: #706868;
+}
 form > select{
     height: 25px;
 }
@@ -81,9 +116,39 @@ form > select{
     align-items: center;
     justify-items: center;
     width: 100%;
-    background-color:rgb(128, 128, 128);
+    background-color: #e5e5e5;
     margin: 15px 0px;
     border-radius: 5px;
+    transition: transform 0.2s;
+}
+.task:hover{
+    transform: scale(1.05);
+}
+.btnDelTask {
+    width:23px;
+    height: 23px;
+    background: url('./icons/bin25.svg');
+}
+.btnDelTask:hover{
+    background-color:  #84a98c;
+}
+.btnEditTask{
+    width:25px;
+    height: 25px;
+    background: url('./icons/edit.svg');
+}
+.btnEditTask:hover{
+    background-color:  #84a98c;
+}
+.btnDelTask:hover, .btnEditTask:hover{
+    cursor: pointer;
+}
+
+.addProjectPane button{
+    margin-right:10px;
+    margin-top:10px;
+    background-color: #84a98c;
+    padding: 10px 5px;
 }
 .line-through{
     text-decoration: line-through;
@@ -94,4 +159,88 @@ form > select{
 
 .focus{
     text-decoration: underline;
+    background-color: #d2cfcf;
+}
+
+.projects{
+    padding-left: 15px;
+}
+
+.addProjectPane{
+    margin-top: 30px;
+}
+
+h2 {
+    width: 100%;
+    margin:10px 0px;
+    padding:5px 5px;
+}
+h2.project {
+    position: relative;
+}
+h2 > .btnDelProj{
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    border:none;
+   
+}
+button {
+    font-size: 15px;
+    font-weight: 1000;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+h2.project > button{
+    display:none;
+    background: none;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+h2.project:hover > button{
+    display:inline-block;
+}
+
+#btnAddProject{
+    display: flex;
+    align-items: center;
+    background-color: #e5e5e5;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight:100;
+}
+.frmAddTask{
+    margin-bottom: 50px;
+}
+#btnAddTask {
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight:100;
+}
+#btnAddTask:hover {
+    background-color: #e5e5e5;
+}
+.title:hover, .today:hover, .thisWeek:hover, .projects>h2:hover{
+    background-color: #d2cfcf;
+    cursor: pointer;
+}
+#btnAddProject:hover {
+    background-color: #d2cfcf;
+    cursor: pointer;
+}
+
+.cross{
+    font-size: 25px;
+    margin-right: 20px;
 }

@@ -7,14 +7,16 @@
     <title>to-do-app</title>
 </head>
 <body>
-    <h1>To-Do List</h1>
+    <header><p>To-Do List</p></header>
 <div class="app">
     <div class="side">
-        <h2 class="title focus">Inbox</h2>
-        <h2>Projects</h2>
+        <h2 class="title">Inbox</h2>
+        <h2 class="today">Today</h2>
+        <h2 class="thisWeek">This week</h2>
+        <h2 >Projects</h2>
         <div class="projects">
            <div class="addProjectPane">
-              <button id="btnAddProject">+ Add Project</button>
+              <button id="btnAddProject"><span class="cross">+</span> Add Project</button>
            </div>
         </div>
     </div>
@@ -22,7 +24,7 @@
     <div class="inbox">
         <h2 id="projTitle">Inbox</h2>
         <div id="addTaskPane">
-            <button id="btnAddTask">+ Add Task</button>
+            <button id="btnAddTask"><span class="cross">+</span> Add Task</button>
         </div>
     </div>
 </div>
